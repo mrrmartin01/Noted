@@ -3,26 +3,26 @@
     margin: 0;
 }
 
-.container{
-    background-image:url("wall.jpg");
-    background-size:cover;
+.container {
+    background-image: url("wall.jpg");
+    background-size: cover;
     background-repeat: no-repeat;
     height: 100vh;
 }
 
 .bg-color {
-    height: 300px; 
+    height: 300px;
     display: flex;
     justify-content: center;
     align-items: center;
 }
 
-.coverArt{
+.coverArt {
     margin-top: 30%;
     width: 70%;
     height: fit-content;
     background-color: rgb(200, 255, 127);
-    border-radius:2dvi;
+    border-radius: 2dvi;
 }
 
 #selectID {
@@ -31,14 +31,14 @@
     border: 1px solid #ccc;
     border-radius: 4px;
     width: 70%;
-  }
-  
+}
+
 #selectID option {
     background-color: #f7f7f7;
     color: #333;
     font-size: 20px;
     font-weight: lighter;
-  }
+}
 
 #placeHold {
     font-weight: bold;
@@ -47,8 +47,8 @@
     font-size: 20px;
 }
 
-form{
-    display:flex;
+form {
+    display: flex;
     flex-direction: column;
 }
 
@@ -60,30 +60,30 @@ label {
     font-size: x-large;
 }
 
-input[type="number"], select{
+input[type="number"],
+select {
     margin-left: 15px;
     padding: 8px;
     margin-bottom: 5px;
     width: 70%;
     border-radius: 4px;
-    border:1px solid #52d8bf;
+    border: 1px solid #52d8bf;
     box-sizing: border-box;
-    font-size:x-large;
+    font-size: x-large;
 }
 
 button {
     padding: 10px 20px;
     background-color: #4baf70;
     color: white;
-    width: 150px; 
+    width: 150px;
     border: none;
     border-radius: 4px;
     cursor: pointer;
     margin: 15px auto;
-    display: block; 
-  }
-  
-  button:hover {
+    display: block;
+}
+
+button:hover {
     background-color: sienna;
-  }
-  
+}
