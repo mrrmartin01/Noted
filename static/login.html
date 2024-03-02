@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" crossorigin="anonymous">
+        <link rel="shortcut icon" href="img/notepad.jpg" type="image/x-icon">
+        <link href="style.css" rel="stylesheet"/>
+        <title>Logn | Noted</title>
+      </head>
+    <body>
+        <div class="loginSection">
+            <img class="topImage" src="img/smiley2.png" alt="Notepad clip art" />
+        </div>
+        <div class="container">
+            <form class="loginForm" onsubmit="validateEmail(); return false;" >
+                <input type="text" id="emailSide"  placeholder="Username/Email">
+                <input type="password" id="pwd" placeholder="Password">
+                <h3 class="forgotPwd" onclick="openPage('reset')">Forgot Password?</h3>
+                <input type="submit" class="btnEnter clickEnter" value="LOG IN" onclick="openPage('notes')">
+            </form>
+        </div>
+
+            <div class="loginButtons">
+                <p class="optionText">or</p>
+                <button class="btnEnter facebook" onclick="openPage('facebook')">
+                    <i class="fab fa-facebook-square"></i>Login with Facebook
+                </button>
+                <button class="btnEnter google" onclick="openPage('google')">
+                    <i class="fab fa-google"></i>Login with Google
+                </button>
+                <button class="btnEnter apple" onclick="openPage('apple')">
+                    <i class="fab fa-apple"></i>  Login with Apple
+                </button>
+                <h5 class="signupText" onclick="openPage('signup')">Don't have an account? Signup</h5>
+            </div>
+
+
+        <script src="style.js"></script>
+    </body>
+</html>

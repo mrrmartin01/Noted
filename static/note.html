@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="shortcut icon" href="img/notepad.jpg" type="image/x-icon">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" crossorigin="anonymous">
+    <link href="style.css" rel="stylesheet"/>
+    <title>Home | Noted</title>
+  </head>
+  <body>
+    <div class="notePage">
+        <h1 class="notesHeader"> My Notes</h1>
+        <div class="contents">
+            <div class="searchStyler">
+                <input type="search" class="searchBar" id="searchBar" placeholder="Search">
+                    <i class="fa fa-search"></i>
+            </div>
+
+            <div class="boxes">
+                <div class="eachBox">
+                  <div class="ellipsis-icon">
+                    <i class="fa fa-ellipsis-h" aria-hidden="true"></i>
+                  </div>
+                    <h5 class="noteHeader">Motivational Quotes</h1>
+                    <h6 class="noteText">This is for motivation</h6>
+                </div>
+
+
+                <div class="moreBox" onclick="openPage('textHolder')">
+                  <div class="plus-icon">
+                    <i class="fa fa-plus-circle" aria-hidden="true"></i>
+                    <h5 class="more-noteHeader">Create new note</h5>
+                  </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+
+    <script src="style.js" defer></script>
+  </body>
+</html>

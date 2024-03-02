@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="shortcut icon" href="img/notepad.jpg" type="image/x-icon">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" crossorigin="anonymous">
+    <link href="style.css" rel="stylesheet"/>
+    <title>Home | Noted</title>
+  </head>
+  <body>
+    <div class="textArea">
+      <div class="splitter">
+          <i class="fa fa-chevron-left" aria-hidden="true"  onclick="openPage('back')"></i>
+          <input placeholder="Type your title here" type="text" class="textHead"></input>
+          <i class="fa fa-ellipsis-v" aria-hidden="true"></i>
+      </div>
+      <div class="notesArena">
+        <textarea id="editor" spellcheck="true" placeholder="Type notes here" type="text"></textarea>
+    </div>
+    
+
+    <script src="style.js"></script>
+  </body>
+</html>
