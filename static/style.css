@@ -2,6 +2,7 @@
     margin: 0;
     padding: 0;
     font-family:'Times New Roman', monospace;
+    overflow-x: hidden;
 }
 
 ::-webkit-scrollbar {
@@ -26,7 +27,7 @@
     margin-top: 0;
     width: 100%;
     height: 50vh;
-    background-color: #efffef;
+    background-color: #d5f1d5;
     z-index: -1;
 }
 
@@ -40,13 +41,13 @@
 }
 
 .nameTag{
-    font-size: 4rem;
+    font-size: 3rem;
     font-weight: bolder;
-    margin-left: 5%;
+    text-align: center;
 }
 
 .description{
-    font-size: 2rem;
+    font-size: 1rem;
     font-family: 'Times New Roman';
 }
 
@@ -59,8 +60,8 @@
   }
 
 .middleImage{
-    height: 350px; 
-    width:450px;
+    height: 250px; 
+    width:350px;
 }
 
 .btn {
@@ -75,12 +76,8 @@
     z-index: 1; 
     border-radius: 0.5rem;
     width:50%;
-    transition:  0.3s ease;
     border: none;
   }
-
-
-  
 
 
 .btn-begin{
@@ -439,10 +436,13 @@
 .optionHeader,
 .saveButton,
 .deleteButton{
+    width: 100%;
     font-size: 1em;
     padding-top: 1%;
     padding-bottom: 1%;
     font-family: sans-serif;
+    background: transparent;
+    border: none;
 }
 
 .saveButton,
@@ -452,9 +452,9 @@
 
 .saveButton:hover,
 .deleteButton:hover{
-    transform: scale(1.2);
-    border-radius: 1em;
-    background: linear-gradient(to bottom, rgba(255, 255, 255, 0.5) 0%,#707070 0%);
+    border-radius: 5px;
+    background: rgba(0,0,0,0.5);
+    color: #fff;
 }
 
 .thickHR{
@@ -465,53 +465,217 @@
 
 
 
-
-
-/* Media Queries */
-@media screen and (max-width: 500px){
-    .headAlign{
-        margin:  10% 2%;
-        transform: translate(2%, 50%);    
-    }
-
-    .nameTag{
-        font-size: 1.5rem;
-        font-weight: bolder;
-    }
-    
-    .description{
-        font-size: 0.9rem;
-    }
-
+/* mobile */
+@media screen and (max-width: 480px){
     .middleImage{
-        height: 200px; 
-        width:300px;
+        margin-top: -50px;
+        width: 250px;
+        height: 250px;
     }
 
-    .eachBox{
-        padding: 10px;
-        border-radius: 2rem;
-    }
-    
-    .noteHeader{
-        font-size: larger;
-    }
-    
-} 
-
-@media screen and (max-width: 350px){
-    .headAlign{
-        margin:  25% 2%;
-        transform: translate(2%, 50%);    
-    }
-}
-
-@media screen and (max-width: 700px){
     .nameTag{
         font-size: 2rem;
+        font-weight: bolder;
+    }
+
+    .loginSection {
+        margin: 0 auto;
+        width: 60%;
+        padding: 5%;
+    }
+    
+    .topImage {
+        height: auto; 
+        width: 60%;
+    }
+    
+    .loginForm {
+        width: 90%;
+    }
+    
+    
+    .forgotPwd{
+        font-size: 15px;
+        cursor: pointer;
+    }
+    
+    .loginButtons {
+        width: 90%;
+    }
+    
+    
+    .btnEnter{
+        font-size: large;
+        height: 2.3rem;
+        margin: 3px;
+        border: none;
+    }
+       
+    .optionText{
+        margin: 2.5%;
+    }
+    
+    .clickEnter{
+        margin-top: 5%;
+    }
+
+    .notePage{
+        margin: 5%;
+    }
+    
+    .notesHeader{
+        margin-bottom: 2%;
+        font-size: 2em;
+    }
+    
+    .searchBar {
+        height: 2rem;
+        font-size: 1em;
+        padding-left: 30px; 
+    }
+    
+    .searchBar:focus{
+        outline:none; 
+    }
+    
+    .fa-search {
+        font-size: 1em;
+    }
+
+    .boxes{
+        display:grid;
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .eachBox, .hiddenNote{
+        box-shadow: 0 0 5px rgba(0,0,0,0.2);
+    }
+
+    .noteHeader{
+        margin-top: 5px;
+        color: #fff;
+        font-size: 1em;
+    }
+
+    .noteText{
+        color: #ece7e7;
+        font-size: 15px;
+        padding-top: 10%;
+        line-height: 1;
+    }
+
+    .ellipsis-icon{
+        display: absolute;
+        padding-left: 85%;
+        font-size: 0.5em;
+        color: #fff;
+        opacity: 0.8;
+    }
+
+    .fa-ellipsis-h{
+        padding: 5px;
+        background: linear-gradient(to bottom, rgba(255, 255, 255, 0.5) 0%, rgba(255, 255, 255, 0.5) 100%);
+        border-radius: 1em;
+    }
+
+
+    .moreBox{
+        background-color: #f0eeee;
+        padding: 20px;
+        border-radius: 1em;
+        box-shadow: 0 0 5px rgba(0,0,0,0.1);
+        cursor: pointer;
+    }
+
+    .more-noteHeader{
+        margin-top: 10%;
+        color: #ccc;
+        font-size: 25px;
+    }
+
+    .plus-icon{
+        font-size: 40px;
+    }
+
+    .fa-plus-circle{
+        color: #ccc;
+        background-color: #fff;
+        border-radius: 1em;
+    }
+
+}
+
+
+/* extra small devices */
+@media (min-width: 481px) and (max-width: 767px){
+    .nameTag{
+        font-size: 4rem;
     }
     
     .description{
         font-size: 1rem;
+    }
+
+    .middleImage{
+        padding-top: 15%;
+    }
+
+    .loginSection {
+        margin: 0 auto;
+        width: 60%;
+        padding: 5%;
+    }
+    
+    .topImage {
+        height: auto; 
+        width: 60%;
+    }
+    
+    .loginForm {
+        width: 90%;
+    }
+    
+    
+    .forgotPwd{
+        font-size: 15px;
+        cursor: pointer;
+    }
+    
+    .loginButtons {
+        width: 90%;
+    }
+    
+    
+    .btnEnter{
+        font-size: large;
+        height: 2.3rem;
+        margin: 3px;
+        border: none;
+    }
+       
+    .optionText{
+        margin: 2.5%;
+    }
+    
+    .clickEnter{
+        background-color:#ff9f00;
+        margin-top: 5%;
+    }
+}
+    
+
+
+/* small tablets */
+@media (min-width: 768px) and (max-width: 991px){
+    .nameTag{
+        font-size: 3rem;
+    }
+    
+    .description{
+        font-size: 1rem;
+    }
+
+    .middleImage{
+        padding-top: 20%;
     }
 }

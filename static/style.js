@@ -7,7 +7,8 @@ function openPage(page) {
         window.location.href ='textHolder.html';
     } else if (page === 'back')
     window.location.href = 'note.html';
-
+    else if (page === 'textHolder')
+        window.location.href = 'textHolder.html'; 
 };
 
 
@@ -60,6 +61,8 @@ document.addEventListener('DOMContentLoaded', () => {
 
 function alterSection() {
     const faEllipsisV = document.querySelector('.fa-ellipsis-v');
+    const editor = document.getElementById('editor');
+    const saveButton =document.querySelector('saveButton')
     const body = document.body;
 
     const altSection = document.createElement('div');
@@ -67,9 +70,9 @@ function alterSection() {
     altSection.innerHTML = `
         <h5 class="optionHeader">What next?</h5>
         <hr class="thickHR">
-        <h6 class="saveButton">Save</h6>
+        <button class="saveButton">Save</button>
         <hr>
-        <h6 class="deleteButton">Delete</h6>
+        <button class="deleteButton">Delete</button>
     `;
 
     faEllipsisV.addEventListener('click', () => {
@@ -81,15 +84,22 @@ function alterSection() {
             body.removeChild(altSection);
         }
     });
+
+    editor.addEventListener('click', () => {
+        if(body.contains(altSection)){
+            body.removeChild(altSection)
+        }
+    });
+
+    saveButton.addEventListener('click', () => {
+        console.log(editor.value)
+    })
 }
+
+
 
 // Call the function to set up the event listener
 alterSection();
-
-getNotes().forEach(note => {
-    const noteElement = createNoteElement(note.id, note.content);
-    notesContainer.insertBefore(noteElement, addNoteButton);
-});
 
 function openNewNote(id) {
     const gridContainer = document.querySelector('.boxes');
@@ -118,79 +128,29 @@ function openNewNote(id) {
 
 
 
-
-
-
-// Notes js
-// const notesContainer = document.querySelector('.boxes');
-// const addNotesButton = notesContainer.querySelector('.moreBox');
-// addNotesButton.addEventListener('click', openNewNote, false);
-
-function getNotes(){
-    return JSON.parse(localStorage.getItem("noted-notes") || "[]");
-}
-
-
-function saveNotes(notes){
-    localStorage.setItem("noted-notes", JSON.stringify(notes));
-}
-
-
-function addNote(){
-
-}
-  
-
-function updateNotes(){
-
-}
-
-
-function deleteNote(){
-
-}
-
-
-
-
-
-// let allNotes = [];
-// let title = document.querySelector('.textHead');
-// let content = document.querySelector('#editor');
-// let saveButton = document.querySelector('.saveButton');
-// let deleteButton = document.querySelector('.deleteButton');
-// if (localStorage.getItem('notes')){
-//     let storedData = JSON.parse(localStorage.getItem('notes'))
-//     title.value = storedData.title
-//     content.value = storedData.content
+// function getNotes(){
+//     return JSON.parse(localStorage.getItem("noted-notes") || "[]");
 // }
 
 
-// saveButton.addEventListener('click', () => {
-//     let titleValue = title.value;
-//     let contentValue = content.value;
-//     allNotes.push({
-//         title: titleValue,
-//         content: contentValue
-//     })
-
-//     localStorage.setItem('notes', JSON.stringify({
-//         title:titleValue,
-//         content:contentValue
-//     }));
-    
-//     title.value = titleValue
-//     content.value = contentValue
-// });
-
-// deleteButton.addEventListener('click', () => {
-//     allNotes.shift({
-//          noteCounter
-//     })
-// })
+// function saveNotes(notes){
+//     localStorage.setItem("noted-notes", JSON.stringify(notes));
+// }
 
 
+// function addNote(){
 
+// }
+  
+
+// function updateNotes(){
+
+// }
+
+
+// function deleteNote(){
+
+// }
 
 
 
